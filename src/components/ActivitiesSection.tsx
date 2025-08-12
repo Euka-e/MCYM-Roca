@@ -10,20 +10,19 @@ import {
 const ActivitiesSection = () => {
   const activities = [
     {
+      title: "Reunión de Oración",
+      description: "Un tiempo especial para buscar a Dios en oración y comunión con los hermanos.",
+      times: ["Martes, 19:00 hs"],
+      icon: Church,
+      color: "bg-red-100 text-red-800",
+    },
+    {
       title: "Reunión General",
       description:
         "Acompañanos en adoración, comunión y un mensaje que edifica cada domingo por la mañana.",
       times: ["Viernes, 19:30 hs", "Domingos, 10:00 hs"],
       icon: Music,
       color: "bg-church-100 text-church-800",
-    },
-    {
-      title: "Reunión de Jóvenes",
-      description:
-        "Actividades y charlas para que los jóvenes crezcan en la fe y la amistad.",
-      times: ["Sábado, 18:00 hs"],
-      icon: Users,
-      color: "bg-warm-100 text-warm-800",
     },
     {
       title: "Escuelita Biblica",
@@ -34,11 +33,12 @@ const ActivitiesSection = () => {
       color: "bg-green-100 text-green-800",
     },
     {
-      title: "Reunión de Oración",
-      description: "Un tiempo especial para buscar a Dios en oración y comunión con los hermanos.",
-      times: ["Martes, 19:00 hs"],
-      icon: Church,
-      color: "bg-red-100 text-red-800",
+      title: "Reunión de Jóvenes",
+      description:
+        "Actividades y charlas para que los jóvenes crezcan en la fe y la amistad.",
+      times: ["Sábado, 18:00 hs"],
+      icon: Users,
+      color: "bg-warm-100 text-warm-800",
     }
   ];
 
