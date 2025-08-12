@@ -20,27 +20,21 @@ const Events = () => {
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
-              Church Events & Special Services
+              Eventos y Servicios Especiales
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Stay up to date with all our special events, services, and
-              community gatherings. Create posts for current events and plan
-              future celebrations.
+              Mantenete al día con nuestros eventos y encuentros. Creá publicaciones para eventos actuales y planificá celebraciones futuras.
             </p>
           </div>
 
           {/* Action Bar */}
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
             <div className="flex-1">
-              <Input
-                placeholder="Search events..."
-                className="max-w-md"
-                icon={<Filter className="h-4 w-4" />}
-              />
+              <Input placeholder="Buscar eventos..." className="max-w-md" />
             </div>
             <Button className="bg-primary hover:bg-primary/90">
               <Plus className="h-4 w-4 mr-2" />
-              Create Event Post
+              Crear publicación de evento
             </Button>
           </div>
 
@@ -50,19 +44,18 @@ const Events = () => {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Calendar className="h-5 w-5" />
-                  Current Events
+                  Eventos actuales
                 </CardTitle>
                 <CardDescription>
-                  Manage and create posts for ongoing events and activities
+                  Gestioná y creá publicaciones de eventos y actividades en curso
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <Button className="bg-primary hover:bg-primary/90 mb-4">
-                  Create Current Event Post
+                  Crear publicación de evento actual
                 </Button>
                 <p className="text-sm text-muted-foreground">
-                  Feature coming soon - Create and manage posts for current
-                  special events with photo uploads and detailed information
+                  Próximamente — Crear y gestionar publicaciones de eventos especiales con fotos e información detallada
                 </p>
               </CardContent>
             </Card>
@@ -71,19 +64,18 @@ const Events = () => {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Calendar className="h-5 w-5" />
-                  Future Events
+                  Eventos futuros
                 </CardTitle>
                 <CardDescription>
-                  Plan and announce upcoming special events and services
+                  Planificá y anunciá próximos eventos y servicios especiales
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <Button className="bg-primary hover:bg-primary/90 mb-4">
-                  Plan Future Event
+                  Planificar evento futuro
                 </Button>
                 <p className="text-sm text-muted-foreground">
-                  Feature coming soon - Schedule future events with automatic
-                  reminders and registration capabilities
+                  Próximamente — Agenda de eventos con recordatorios automáticos y registro
                 </p>
               </CardContent>
             </Card>
@@ -91,29 +83,22 @@ const Events = () => {
 
           {/* Sample Event Display */}
           <div className="space-y-6">
-            <h2 className="text-2xl font-semibold text-foreground">
-              Recent Event Posts
-            </h2>
+            <h2 className="text-2xl font-semibold text-foreground">Publicaciones recientes</h2>
             <Card className="border-warm-200">
               <CardHeader>
-                <CardTitle>Easter Celebration 2024</CardTitle>
-                <CardDescription>
-                  Join us for a special Easter service celebrating the
-                  resurrection of Jesus Christ
-                </CardDescription>
+                <CardTitle>Celebración de Pascua 2024</CardTitle>
+                <CardDescription>Te invitamos a un servicio especial de Pascua</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="aspect-video bg-gradient-to-br from-yellow-100 to-orange-200 rounded-lg flex items-center justify-center mb-4">
                   <p className="text-lg font-medium text-orange-800">
-                    Event Photo Placeholder
+                    Foto de evento (placeholder)
                   </p>
                 </div>
                 <p className="text-muted-foreground mb-4">
-                  This is a sample of how event posts will look. The full system
-                  will include photo uploads, detailed descriptions,
-                  registration links, and more.
+                  Este es un ejemplo de cómo se verán las publicaciones. El sistema completo incluirá carga de fotos, descripciones detalladas, enlaces de registro y más.
                 </p>
-                <Button variant="outline">Learn More</Button>
+                <Button variant="outline">Ver más</Button>
               </CardContent>
             </Card>
 
@@ -121,14 +106,12 @@ const Events = () => {
               <CardContent className="py-12 text-center">
                 <Calendar className="h-12 w-12 mx-auto text-muted-foreground mb-4" />
                 <h3 className="text-lg font-medium text-foreground mb-2">
-                  Full Events System Coming Soon
+                  Sistema de eventos completo próximamente
                 </h3>
                 <p className="text-muted-foreground mb-4">
-                  We're building a comprehensive events management system with
-                  posting capabilities, image uploads, registration, and
-                  automated notifications.
+                  Estamos construyendo un sistema integral para gestionar eventos con publicaciones, carga de imágenes, registro y notificaciones automáticas.
                 </p>
-                <Button variant="outline">Stay Updated</Button>
+                <Button variant="outline">Quiero estar al tanto</Button>
               </CardContent>
             </Card>
           </div>

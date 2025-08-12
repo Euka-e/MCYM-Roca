@@ -2,37 +2,31 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
 import { MapPin, Phone, Mail, Clock, Users, Heart } from "lucide-react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 const Contact = () => {
   const staff = [
     {
-      name: "Pastor David Johnson",
-      role: "Senior Pastor",
-      email: "pastor@gracecommunity.org",
-      phone: "(555) 123-7701",
-      bio: "Leading our congregation with wisdom and compassion for over 15 years.",
+      name: "Pastor/a",
+      role: "Pastor/a principal",
+      email: "pastor@mcymgeneralroca.org",
+      phone: "(299) 000-0000",
+      bio: "Acompañando a la iglesia con sabiduría y compasión.",
     },
     {
-      name: "Sarah Mitchell",
-      role: "Worship Director",
-      email: "worship@gracecommunity.org",
-      phone: "(555) 123-7702",
-      bio: "Passionate about creating meaningful worship experiences for all ages.",
+      name: "Líder de Alabanza",
+      role: "Dirección de alabanza",
+      email: "alabanza@mcymgeneralroca.org",
+      phone: "(299) 000-0001",
+      bio: "Apasionado/a por crear tiempos de adoración significativos para todas las edades.",
     },
     {
-      name: "Michael Chen",
-      role: "Youth Pastor",
-      email: "youth@gracecommunity.org",
-      phone: "(555) 123-7703",
-      bio: "Dedicated to helping young people grow in their faith and purpose.",
+      name: "Pastor/a de Jóvenes",
+      role: "Jóvenes",
+      email: "jovenes@mcymgeneralroca.org",
+      phone: "(299) 000-0002",
+      bio: "Dedicado/a a ayudar a los jóvenes a crecer en su fe y propósito.",
     },
   ];
 
@@ -40,21 +34,17 @@ const Contact = () => {
     <div className="min-h-screen">
       <Navigation />
       <main>
-        {/* Hero Section */}
+        {/* Hero */}
         <section className="py-16 bg-gradient-to-br from-warm-50 to-church-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
-              Contact Us
-            </h1>
+            <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">Contacto</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We're here for you! Whether you need prayer, have questions about
-              faith, or want to get involved in our community, we'd love to
-              connect with you.
+              ¡Estamos para servirte! Si tenés preguntas sobre la fe o querés sumarte a la iglesia, nos encantaría conectarnos con vos.
             </p>
           </div>
         </section>
 
-        {/* Quick Contact Cards */}
+        {/* Tarjetas rápidas */}
         <section className="py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-3 gap-6 mb-16">
@@ -63,15 +53,11 @@ const Contact = () => {
                   <div className="mx-auto p-3 bg-primary/10 rounded-full w-fit">
                     <Heart className="h-6 w-6 text-primary" />
                   </div>
-                  <CardTitle>Prayer Requests</CardTitle>
-                  <CardDescription>
-                    Need prayer? Our team is here to pray with and for you.
-                  </CardDescription>
+                  <CardTitle>Oración</CardTitle>
+                  <CardDescription>¿Necesitás oración? Nuestro equipo está para acompañarte.</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Button className="bg-primary hover:bg-primary/90">
-                    Submit Prayer Request
-                  </Button>
+                  <Button className="bg-primary hover:bg-primary/90">Enviar solicitud de oración</Button>
                 </CardContent>
               </Card>
 
@@ -80,13 +66,11 @@ const Contact = () => {
                   <div className="mx-auto p-3 bg-primary/10 rounded-full w-fit">
                     <Users className="h-6 w-6 text-primary" />
                   </div>
-                  <CardTitle>New to Grace?</CardTitle>
-                  <CardDescription>
-                    We'd love to welcome you and help you get connected.
-                  </CardDescription>
+                  <CardTitle>¿Sos nuevo/a?</CardTitle>
+                  <CardDescription>Queremos darte la bienvenida y ayudarte a conectarte.</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Button variant="outline">Plan Your Visit</Button>
+                  <Button variant="outline">Planificá tu visita</Button>
                 </CardContent>
               </Card>
 
@@ -95,32 +79,27 @@ const Contact = () => {
                   <div className="mx-auto p-3 bg-primary/10 rounded-full w-fit">
                     <Mail className="h-6 w-6 text-primary" />
                   </div>
-                  <CardTitle>Emergency Contact</CardTitle>
-                  <CardDescription>
-                    For urgent pastoral care or emergencies, call our hotline.
-                  </CardDescription>
+                  <CardTitle>Contacto de emergencia</CardTitle>
+                  <CardDescription>Para atención pastoral urgente, llamá a nuestra línea directa.</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Button variant="outline">(555) 123-HELP</Button>
+                  <Button variant="outline">(299) 000-0003</Button>
                 </CardContent>
               </Card>
             </div>
           </div>
         </section>
 
-        {/* Main Contact Section */}
+        {/* Sección principal de contacto */}
         <ContactSection />
 
-        {/* Staff Directory */}
+        {/* Staff */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-4">
-                Meet Our Staff
-              </h2>
+              <h2 className="text-3xl font-bold text-foreground mb-4">Conocé a nuestro equipo</h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Our dedicated team is here to serve you and help you grow in
-                your faith journey.
+                Un equipo comprometido para servirte y acompañarte en tu caminar de fe.
               </p>
             </div>
 
@@ -137,9 +116,7 @@ const Contact = () => {
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="text-center space-y-3">
-                    <p className="text-muted-foreground text-sm">
-                      {member.bio}
-                    </p>
+                    <p className="text-muted-foreground text-sm">{member.bio}</p>
                     <div className="space-y-2">
                       <div className="flex items-center justify-center text-sm text-muted-foreground">
                         <Mail className="h-4 w-4 mr-2" />
@@ -150,9 +127,7 @@ const Contact = () => {
                         {member.phone}
                       </div>
                     </div>
-                    <Button variant="outline" size="sm" className="mt-4">
-                      Contact {member.name.split(" ")[0]}
-                    </Button>
+                    <Button variant="outline" size="sm" className="mt-4">Contactar</Button>
                   </CardContent>
                 </Card>
               ))}
@@ -160,20 +135,16 @@ const Contact = () => {
           </div>
         </section>
 
-        {/* Location & Hours */}
+        {/* Ubicación y horarios */}
         <section className="py-16 bg-warm-50/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12">
               <div>
-                <h3 className="text-2xl font-bold text-foreground mb-6">
-                  Visit Us
-                </h3>
+                <h3 className="text-2xl font-bold text-foreground mb-6">Visitanos</h3>
                 <div className="aspect-video bg-gradient-to-br from-church-100 to-warm-200 rounded-lg flex items-center justify-center mb-6">
                   <div className="text-center">
                     <MapPin className="h-12 w-12 mx-auto text-primary mb-2" />
-                    <p className="text-primary font-medium">
-                      Interactive Map Coming Soon
-                    </p>
+                    <p className="text-primary font-medium">Mapa interactivo próximamente</p>
                   </div>
                 </div>
                 <Card className="border-warm-200">
@@ -181,17 +152,13 @@ const Contact = () => {
                     <div className="flex items-start space-x-4">
                       <MapPin className="h-5 w-5 text-primary mt-1" />
                       <div>
-                        <h4 className="font-medium text-foreground">
-                          Our Address
-                        </h4>
+                        <h4 className="font-medium text-foreground">Dirección</h4>
                         <p className="text-muted-foreground">
-                          123 Faith Street
+                          Cipolletti 860
                           <br />
-                          Grace Valley, CA 90210
+                          General Roca, Río Negro
                         </p>
-                        <Button variant="outline" size="sm" className="mt-3">
-                          Get Directions
-                        </Button>
+                        <Button variant="outline" size="sm" className="mt-3">Cómo llegar</Button>
                       </div>
                     </div>
                   </CardContent>
@@ -199,9 +166,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-foreground mb-6">
-                  When We're Here
-                </h3>
+                <h3 className="text-2xl font-bold text-foreground mb-6">Horarios</h3>
                 <div className="space-y-4">
                   <Card className="border-warm-200">
                     <CardContent className="p-6">
@@ -209,33 +174,27 @@ const Contact = () => {
                         <Clock className="h-5 w-5 text-primary mt-1" />
                         <div className="space-y-3">
                           <div>
-                            <h4 className="font-medium text-foreground">
-                              Sunday Services
-                            </h4>
+                            <h4 className="font-medium text-foreground">Reuniones Dominicales</h4>
                             <p className="text-muted-foreground">
-                              Sunday Worship: 10:00 AM - 11:30 AM
+                              Adoración: 10:00 - 11:30 hs
                               <br />
-                              Sunday School: 9:00 AM - 9:45 AM
+                              Escuela dominical: 9:00 - 9:45 hs
                             </p>
                           </div>
                           <div>
-                            <h4 className="font-medium text-foreground">
-                              Weekly Programs
-                            </h4>
+                            <h4 className="font-medium text-foreground">Programas semanales</h4>
                             <p className="text-muted-foreground">
-                              Wednesday Bible Study: 7:00 PM - 8:30 PM
+                              Estudio bíblico (miércoles): 19:00 - 20:30 hs
                               <br />
-                              Friday Youth Group: 7:00 PM - 9:00 PM
+                              Jóvenes (viernes): 19:00 - 21:00 hs
                             </p>
                           </div>
                           <div>
-                            <h4 className="font-medium text-foreground">
-                              Office Hours
-                            </h4>
+                            <h4 className="font-medium text-foreground">Horarios de oficina</h4>
                             <p className="text-muted-foreground">
-                              Monday - Friday: 9:00 AM - 5:00 PM
+                              Lunes a viernes: 9:00 - 17:00 hs
                               <br />
-                              Saturday: 10:00 AM - 2:00 PM
+                              Sábado: 10:00 - 14:00 hs
                             </p>
                           </div>
                         </div>

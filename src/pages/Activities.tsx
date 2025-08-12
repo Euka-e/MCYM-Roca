@@ -20,12 +20,10 @@ const Activities = () => {
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
-              Church Activities & Programs
+              Actividades y programas de la iglesia
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Discover all the ways you can connect, grow, and serve in our
-              vibrant church community. From worship services to community
-              outreach, there's something for everyone.
+              Descubrí todas las formas de conectar, crecer y servir en nuestra iglesia familiar. Desde reuniones de adoración hasta acción social, hay algo para todos.
             </p>
           </div>
 
@@ -34,20 +32,18 @@ const Activities = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Upload className="h-5 w-5" />
-                Share Activity Photos
+                Compartí fotos de actividades
               </CardTitle>
               <CardDescription>
-                Have photos from recent activities? Upload them here to share
-                with the community!
+                ¿Tenés fotos de actividades recientes? Subilas acá para compartir con la familia MCYM.
               </CardDescription>
             </CardHeader>
             <CardContent>
               <Button className="bg-primary hover:bg-primary/90">
-                Upload Photos
+                Subir fotos
               </Button>
               <p className="text-sm text-muted-foreground mt-2">
-                Feature coming soon - Upload and organize photos from church
-                activities
+                Próximamente — Subí y organizá fotos de las actividades de la iglesia
               </p>
             </CardContent>
           </Card>
@@ -58,49 +54,44 @@ const Activities = () => {
             <Card className="border-warm-200">
               <CardHeader>
                 <Badge className="w-fit bg-church-100 text-church-800">
-                  Weekly
+                  Semanal
                 </Badge>
-                <CardTitle>Sunday Worship Service</CardTitle>
+                <CardTitle>Reunión Dominical</CardTitle>
                 <CardDescription>
-                  Join us every Sunday for inspiring worship, biblical teaching,
-                  and community fellowship.
+                  Te esperamos cada domingo para adorar, recibir enseñanza bíblica y compartir en familia.
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-3">
                 <div className="flex items-center text-sm text-muted-foreground">
                   <Calendar className="h-4 w-4 mr-2" />
-                  Every Sunday
+                  Todos los domingos
                 </div>
                 <div className="flex items-center text-sm text-muted-foreground">
                   <Clock className="h-4 w-4 mr-2" />
-                  10:00 AM - 11:30 AM
+                  10:00 - 11:30 hs
                 </div>
                 <div className="flex items-center text-sm text-muted-foreground">
                   <MapPin className="h-4 w-4 mr-2" />
-                  Main Sanctuary
+                  Auditorio principal
                 </div>
                 <div className="flex items-center text-sm text-primary font-medium">
                   <Users className="h-4 w-4 mr-2" />
-                  200+ regular attendees
+                  200+ asistentes habituales
                 </div>
-                <Button className="w-full mt-4">View Details</Button>
+                <Button className="w-full mt-4">Ver detalles</Button>
               </CardContent>
             </Card>
 
             {/* Additional activity cards would go here */}
             <Card className="border-warm-200 bg-warm-50/30">
               <CardHeader className="text-center">
-                <CardTitle className="text-lg">
-                  More Activities Coming
-                </CardTitle>
+                <CardTitle className="text-lg">Más actividades pronto</CardTitle>
                 <CardDescription>
-                  We're building a comprehensive activities management system
-                  with photo uploads, registration, and detailed information for
-                  each program.
+                  Estamos construyendo un sistema completo para gestionar actividades con fotos, registro e información detallada de cada programa.
                 </CardDescription>
               </CardHeader>
               <CardContent className="text-center">
-                <Button variant="outline">Stay Tuned</Button>
+                <Button variant="outline">Próximamente</Button>
               </CardContent>
             </Card>
           </div>

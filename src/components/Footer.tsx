@@ -3,7 +3,6 @@ import {
   Church,
   Facebook,
   Instagram,
-  Twitter,
   Youtube,
   Mail,
   Phone,
@@ -13,28 +12,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
 const Footer = () => {
-  const quickLinks = [
-    { name: "About Us", href: "/about" },
-    { name: "Service Times", href: "/services" },
-    { name: "Ministries", href: "/ministries" },
-    { name: "Events", href: "/events" },
-    { name: "Give", href: "/give" },
-    { name: "Contact", href: "/contact" },
-  ];
-
-  const ministries = [
-    { name: "Children's Ministry", href: "/ministries/children" },
-    { name: "Youth Group", href: "/ministries/youth" },
-    { name: "Men's Ministry", href: "/ministries/men" },
-    { name: "Women's Ministry", href: "/ministries/women" },
-    { name: "Senior Ministry", href: "/ministries/seniors" },
-    { name: "Outreach", href: "/ministries/outreach" },
-  ];
-
   return (
     <footer className="bg-foreground text-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main Footer Content */}
         <div className="py-12 grid lg:grid-cols-4 md:grid-cols-2 gap-8">
           {/* Church Info */}
           <div className="space-y-6">
@@ -43,118 +23,74 @@ const Footer = () => {
                 <Church className="h-6 w-6 text-primary-foreground" />
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-bold">Grace Community</span>
-                <span className="text-sm text-background/70">Church</span>
+                <span className="text-xl font-bold">MCYM General Roca</span>
+                <span className="text-sm text-background/70">Iglesia</span>
               </div>
             </Link>
 
             <p className="text-background/80 leading-relaxed">
-              A place where faith grows, community thrives, and everyone
-              belongs. We're committed to loving God and serving our neighbors.
+              Una iglesia familiar donde crece la fe y todos son bienvenidos. Nos comprometemos a amar a Dios y servir a nuestro prójimo.
             </p>
 
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-sm text-background/80">
                 <MapPin className="h-4 w-4" />
-                <span>123 Faith Street, Grace Valley, CA 90210</span>
+                <span>Cipolletti 860, General Roca, Río Negro</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-background/80">
                 <Phone className="h-4 w-4" />
-                <span>(555) 123-PRAY</span>
-              </div>
-              <div className="flex items-center space-x-2 text-sm text-background/80">
-                <Mail className="h-4 w-4" />
-                <span>info@gracecommunity.org</span>
+                <span>(+54) 298 420-4886</span>
               </div>
             </div>
           </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              {quickLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-background/80 hover:text-background transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Ministries */}
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Ministries</h3>
-            <ul className="space-y-2">
-              {ministries.map((ministry) => (
-                <li key={ministry.name}>
-                  <Link
-                    to={ministry.href}
-                    className="text-background/80 hover:text-background transition-colors"
-                  >
-                    {ministry.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Newsletter Signup */}
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Stay Connected</h3>
-            <p className="text-background/80 mb-4">
-              Subscribe to our newsletter for updates on events, sermons, and
-              community news.
-            </p>
-
-            <div className="space-y-3">
-              <Input
-                placeholder="Enter your email"
-                className="bg-background/10 border-background/20 text-background placeholder:text-background/60"
-              />
-              <Button
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
-                size="sm"
-              >
-                Subscribe
-              </Button>
-            </div>
-
-            {/* Social Media */}
+          <div className="md:ml-20">
             <div className="mt-6">
-              <h4 className="font-medium mb-3">Follow Us</h4>
-              <div className="flex space-x-3">
+              <h4 className="text-xl mb-3">Seguinos</h4>
+              <div className="grid grid-cols-3 gap-3 md:flex md:space-x-3 md:gap-0">
                 <Button
                   size="sm"
                   variant="ghost"
-                  className="p-2 hover:bg-background/10"
+                  className="p-2 hover:bg-background/10 w-full md:w-auto"
+                  asChild
                 >
-                  <Facebook className="h-4 w-4" />
+                  <a
+                    href="https://www.facebook.com/iglesiamcymroca"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook MCYM General Roca"
+                  >
+                    <Facebook className="h-6 w-6" />
+                  </a>
                 </Button>
                 <Button
                   size="sm"
                   variant="ghost"
-                  className="p-2 hover:bg-background/10"
+                  className="p-2 hover:bg-background/10 w-full md:w-auto"
+                  asChild
                 >
-                  <Instagram className="h-4 w-4" />
+                  <a
+                    href="https://www.instagram.com/iglesiamcymroca?utm_source=ig_web_button_share_sheet&igsh=MWRiaDVlN2ljNXJscg=="
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram MCYM General Roca"
+                  >
+                    <Instagram className="h-6 w-6" />
+                  </a>
                 </Button>
                 <Button
                   size="sm"
                   variant="ghost"
-                  className="p-2 hover:bg-background/10"
+                  className="p-2 hover:bg-background/10 w-full md:w-auto"
+                  asChild
                 >
-                  <Twitter className="h-4 w-4" />
-                </Button>
-                <Button
-                  size="sm"
-                  variant="ghost"
-                  className="p-2 hover:bg-background/10"
-                >
-                  <Youtube className="h-4 w-4" />
+                  <a
+                    href="https://www.youtube.com/@iglesiamcymroca7312"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="YouTube MCYM General Roca"
+                  >
+                    <Youtube className="h-6 w-6" />
+                  </a>
                 </Button>
               </div>
             </div>
@@ -165,29 +101,29 @@ const Footer = () => {
         <div className="border-t border-background/20 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-background/60 text-sm">
-              © 2024 Grace Community Church. All rights reserved.
+              © 2024 MCYM General Roca. Todos los derechos reservados.
             </p>
 
-            <div className="flex space-x-6 text-sm">
+            {/*  <div className="flex space-x-6 text-sm">
               <Link
                 to="/privacy"
                 className="text-background/60 hover:text-background transition-colors"
               >
-                Privacy Policy
+                Política de privacidad
               </Link>
               <Link
                 to="/terms"
                 className="text-background/60 hover:text-background transition-colors"
               >
-                Terms of Service
+                Términos de servicio
               </Link>
               <Link
                 to="/accessibility"
                 className="text-background/60 hover:text-background transition-colors"
               >
-                Accessibility
+                Accesibilidad
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
