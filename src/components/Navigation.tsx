@@ -31,7 +31,7 @@ const Navigation = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-1 group">
               <div className="p-2 rounded-lg">
-                <img src="../../public/logo.png" alt="MCYM General Roca" className="size-10" />
+                <img src="/logo.png" alt="MCYM General Roca" className="size-10" />
               </div>
               <div className="flex flex-col">
                 <span className="text-xl font-bold text-primary">
