@@ -17,9 +17,9 @@ const ActivitiesSection = () => {
       color: "bg-red-100 text-red-800",
     },
     {
-      title: "Reunión General",
+      title: "Reuniónes Generales",
       description:
-        "Acompañanos en adoración, comunión y un mensaje que edifica cada domingo por la mañana.",
+        "Acompañanos en adoración, comunión y un mensaje que edifica los viernes y domingos.",
       times: ["Viernes, 19:30 hs", "Domingos, 10:00 hs"],
       icon: Music,
       color: "bg-church-100 text-church-800",
