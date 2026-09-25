@@ -7,6 +7,13 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    proxy: {
+      "/api/youtube-feed": {
+        target: "https://www.youtube.com",
+        changeOrigin: true,
+        rewrite: () => "/feeds/videos.xml?channel_id=UCRImVNCeV1WVWITFzCZovYQ",
+      },
+    },
   },
   plugins: [react()],
   resolve: {

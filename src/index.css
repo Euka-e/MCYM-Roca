@@ -35,7 +35,7 @@
 
     --border: 30 25% 90%;
     --input: 30 25% 90%;
-    --ring: 24 85% 45%;
+    --ring: 22 82% 42%;
 
     --radius: 0.5rem;
 
@@ -101,6 +101,11 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background font-sans text-foreground antialiased;
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(22 82% 42%);
+    outline-offset: 2px;
   }
 }

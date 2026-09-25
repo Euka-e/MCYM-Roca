@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/youtube-feed",
+      "destination": "https://www.youtube.com/feeds/videos.xml?channel_id=UCRImVNCeV1WVWITFzCZovYQ"
+    }
+  ]
+}

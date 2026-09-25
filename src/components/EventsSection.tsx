@@ -1,12 +1,6 @@
 import { useState } from "react";
-import { Calendar, Clock, MapPin } from "lucide-react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Calendar, MapPin } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -15,24 +9,14 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 
-const events = [
- /*  {
-    title: "Aniversario MCYM",
-    description:
-      "Celebremos juntos el aniversario de nuestra iglesia con reuniones especiales llenas de adoración, palabras de Dios e invitados especiales.",
-    dates: [
-      "29 de agosto, 19:30 hs",
-      "30 de agosto, 19:30 hs",
-      "31 de agosto, 10:00 hs",
-    ],
-    guests: [
-      "Pastora Alicia Alonso",
-      "Pastor Eduardo Sorensen",
-    ],
-    location: "Cipolletti 860",
-    image: "/aniversary.jpg",
-  }, */
-];
+const events: Array<{
+  title: string;
+  description: string;
+  dates: string[];
+  guests: string[];
+  location: string;
+  image: string;
+}> = [];
 
 const EventsSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -50,7 +34,8 @@ const EventsSection = () => {
               Próximos eventos
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              No te pierdas nuestros próximos encuentros y actividades especiales.
+              No te pierdas nuestros próximos encuentros y actividades
+              especiales.
             </p>
           </div>
         )}
@@ -100,9 +85,7 @@ const EventsSection = () => {
                     className="size-full max-h-[70vh] max-w-[70vh] mx-auto md:mx-0 object-contain"
                   />
                 </div>
-                <p className="mb-6 text-lg font-medium">
-                  {event.description}
-                </p>
+                <p className="mb-6 text-lg font-medium">{event.description}</p>
                 <div className="space-y-2">
                   {event.dates.map((date, idx) => (
                     <div
@@ -119,10 +102,16 @@ const EventsSection = () => {
                   </div>
                 </div>
                 <div className="mt-8">
-                  <h4 className="text-lg font-semibold">Invitados especiales:</h4>
-                  <p>{event.guests.map(guest => (
-                    <span key={guest} className="block">{guest}</span>
-                  ))}</p>
+                  <h4 className="text-lg font-semibold">
+                    Invitados especiales:
+                  </h4>
+                  <p>
+                    {event.guests.map((guest) => (
+                      <span key={guest} className="block">
+                        {guest}
+                      </span>
+                    ))}
+                  </p>
                 </div>
               </div>
             </div>

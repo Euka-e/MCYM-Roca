@@ -18,7 +18,36 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['"Source Sans 3"', "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ["Newsreader", "Georgia", "serif"],
+      },
       colors: {
+        surface: {
+          DEFAULT: "#fffdf7",
+          card: "#ffffff",
+          soft: "#fffaf0",
+          warm: "#fff6e4",
+          warm2: "#fff4e0",
+          media: "#fff3de",
+        },
+        line: {
+          DEFAULT: "#ecdcbe",
+          soft: "#f1e4cd",
+          section: "#f4e9d5",
+          hair: "#f6ecd8",
+        },
+        ink: {
+          DEFAULT: "hsl(24 32% 18%)",
+          body: "hsl(24 18% 32%)",
+          muted: "hsl(24 18% 38%)",
+          soft: "hsl(24 18% 45%)",
+        },
+        brand: {
+          DEFAULT: "hsl(22 78% 38%)",
+          strong: "hsl(22 82% 42%)",
+          hover: "hsl(22 82% 36%)",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -88,9 +117,15 @@ export default {
         },
       },
       borderRadius: {
+        xl2: "16px",
+        xl3: "18px",
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      boxShadow: {
+        play: "0 10px 24px rgba(88,45,10,.32)",
+        hair: "0 0 0 1px #f6ecd8",
       },
       keyframes: {
         "accordion-down": {

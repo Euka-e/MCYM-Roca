@@ -1,135 +1,50 @@
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-
 const ContactSection = () => {
   return (
-    <section className="py-16 bg-warm-50/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            Contactanos
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            ¡Nos encantaría escucharte! Si tenés preguntas o querés sumarte, no dudes en escribirnos.
+    <section className="border-b border-line-section bg-surface px-5 py-10">
+      <h2 className="font-display text-[clamp(26px,6.5vw,32px)] font-medium text-ink">
+        Contactanos
+      </h2>
+      <p className="mb-[26px] mt-3.5 text-lg leading-[1.6] text-[hsl(24_18%_36%)]">
+        ¡Nos encantaría escucharte! Si tenés preguntas o querés sumarte, no
+        dudes en escribirnos.
+      </p>
+      <div className="flex flex-col gap-3.5">
+        <div className="rounded-xl2 border border-line bg-surface-card p-5">
+          <h3 className="text-sm uppercase tracking-[0.14em] text-[hsl(24_40%_42%)]">
+            Dirección
+          </h3>
+          <p className="mt-2 text-[19px] leading-[1.5] text-ink">
+            Cipolletti 860
+            <br />
+            General Roca, Rio Negro, Argentina
           </p>
+          <a
+            href="https://maps.google.com/?q=Cipolletti+860,+General+Roca,+Rio+Negro"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 inline-flex min-h-[48px] items-center text-[17px] font-semibold text-brand hover:underline"
+          >
+            Ver en el mapa →
+          </a>
         </div>
-
-        <div className="grid lg:grid-cols-2 gap-12">
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-semibold text-foreground mb-6">
-                Información de contacto
-              </h3>
-              <div className="space-y-6">
-                <Card className="border-warm-200">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="p-2 bg-primary/10 rounded-lg">
-                        <MapPin className="h-5 w-5 text-primary" />
-                      </div>
-                      <div>
-                        <h4 className="font-medium text-foreground">Dirección</h4>
-                        <p className="text-muted-foreground">
-                          Cipolletti 860
-                          <br />
-                          General Roca, Rio Negro, Argentina
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-warm-200">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="p-2 bg-primary/10 rounded-lg">
-                        <Phone className="h-5 w-5 text-primary" />
-                      </div>
-                      <div>
-                        <h4 className="font-medium text-foreground">Teléfono</h4>
-                        <p className="text-muted-foreground">
-                          (+54) 298 420-4886
-                          <br />
-                          (+54) 298 473-1622
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
+        <div className="rounded-xl2 border border-line bg-surface-card p-5">
+          <h3 className="mb-3 text-sm uppercase tracking-[0.14em] text-[hsl(24_40%_42%)]">
+            Teléfono
+          </h3>
+          <div className="flex flex-col gap-2">
+            <a
+              href="tel:+542984204886"
+              className="flex min-h-[52px] items-center rounded-xl border border-line-soft bg-[#fff9ee] px-4 text-[19px] font-semibold text-ink hover:border-line"
+            >
+              (+54) 298 420-4886
+            </a>
+            <a
+              href="tel:+542984731622"
+              className="flex min-h-[52px] items-center rounded-xl border border-line-soft bg-[#fff9ee] px-4 text-[19px] font-semibold text-ink hover:border-line"
+            >
+              (+54) 298 473-1622
+            </a>
           </div>
-          {/*           <div>
-            <Card className="border-warm-200">
-              <CardHeader>
-                <CardTitle className="text-2xl">Escribinos un mensaje</CardTitle>
-                <CardDescription>
-                  Completá el formulario y te responderemos a la brevedad.
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="firstName">Nombre</Label>
-                    <Input id="firstName" placeholder="Juan" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="lastName">Apellido</Label>
-                    <Input id="lastName" placeholder="Pérez" />
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    placeholder="juan.perez@example.com"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="phone">Teléfono (opcional)</Label>
-                  <Input id="phone" type="tel" placeholder="(299) 123-4567" />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="subject">Asunto</Label>
-                  <Input id="subject" placeholder="¿Cómo podemos ayudarte?" />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="message">Mensaje</Label>
-                  <Textarea
-                    id="message"
-                    placeholder="Contanos lo que necesites..."
-                    rows={5}
-                  />
-                </div>
-
-                <Button
-                  size="lg"
-                  className="w-full bg-primary hover:bg-primary/90"
-                >
-                  Enviar mensaje
-                </Button>
-
-                <p className="text-sm text-muted-foreground text-center">
-                  Respondemos generalmente dentro de 24 horas.
-                </p>
-              </CardContent>
-            </Card>
-          </div> */}
         </div>
       </div>
     </section>
