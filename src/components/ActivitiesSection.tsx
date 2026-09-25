@@ -25,7 +25,7 @@ const ActivitiesSection = () => {
       title: "Reunión de Jóvenes",
       description:
         "Actividades y charlas para que los jóvenes crezcan en la fe y la amistad.",
-      times: ["Sábado, 18:00 hs"],
+      times: ["Sábado, 15:00 hs"],
       badge: "SÁB",
     },
   ];
