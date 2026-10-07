@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title">
-  <title>MCYM General Roca</title>
-  <circle cx="48" cy="48" r="48" fill="#55a9df"/>
-  <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round">
-    <path stroke-width="2" d="M17 42 37 73M23 33l16 31M30 25l12 29M79 42 59 73M73 33 57 64M66 25 54 54"/>
-    <path stroke-width="3" d="M10 63c15 0 25 4 38 13 13-9 23-13 38-13M13 54c14 0 25 5 35 16 10-11 21-16 35-16M18 46c12 2 21 7 30 18 9-11 18-16 30-18"/>
-  </g>
-  <path fill="#fff" d="M45 25h6v10h10v6H51v27h-6V41H35v-6h10z"/>
-</svg>
