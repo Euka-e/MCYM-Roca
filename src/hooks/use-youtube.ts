@@ -73,13 +73,6 @@ export function useYouTubeLatestVideo(
       }
     };
 
-    if (!channelId || !apiKey) {
-      void loadFeed();
-      return () => {
-        cancelled = true;
-      };
-    }
-
     const API = "https://www.googleapis.com/youtube/v3";
 
     async function load() {
@@ -162,9 +155,17 @@ export function useYouTubeLatestVideo(
       }
     }
 
-    void load();
+    const loadTimer = window.setTimeout(() => {
+      if (!channelId || !apiKey) {
+        void loadFeed();
+        return;
+      }
+      void load();
+    }, 1500);
+
     return () => {
       cancelled = true;
+      window.clearTimeout(loadTimer);
     };
   }, [channelId, apiKey]);
 

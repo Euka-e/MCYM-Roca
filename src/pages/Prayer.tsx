@@ -1,101 +1,57 @@
-import Navigation from "@/components/Navigation";
+import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
-import { Heart, Send, Users } from "lucide-react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
+import Navigation from "@/components/Navigation";
+import { Heart, MessageCircle } from "lucide-react";
+
+const PRAYER_WHATSAPP_URL =
+  "https://wa.me/542984204886?text=Hola%2C%20quisiera%20compartir%20un%20pedido%20de%20oraci%C3%B3n.";
+const TEAM_WHATSAPP_URL =
+  "https://wa.me/542984204886?text=Hola%2C%20me%20gustar%C3%ADa%20sumarme%20al%20equipo%20de%20oraci%C3%B3n.";
 
 const Prayer = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-surface">
       <Navigation />
-      <main className="py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-              <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">Solicitudes de oración</h1>
-              <p className="text-xl text-muted-foreground">Creemos en el poder de la oración. Compartí tu pedido con nuestro equipo.</p>
-          </div>
+      <main>
+        <section className="bg-warm-50 px-5 py-14 text-center">
+          <Heart className="mx-auto h-10 w-10 text-brand" aria-hidden="true" />
+          <h1 className="mt-4 font-display text-4xl font-semibold text-ink sm:text-5xl">
+            Pedidos de oración
+          </h1>
+          <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+            Creemos en el poder de la oración. Compartí tu pedido y vamos a
+            acompañarte con respeto y confidencialidad.
+          </p>
+        </section>
 
-          <div className="grid lg:grid-cols-2 gap-8 mb-12">
-            <Card className="border-church-200 bg-church-50/30">
-              <CardHeader className="text-center">
-                <Heart className="h-12 w-12 mx-auto text-primary mb-4" />
-                <CardTitle>Enviar un pedido de oración</CardTitle>
-                <CardDescription>Compartí tu necesidad de oración y te acompañamos</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="space-y-2">
-                  <Label htmlFor="name">Tu nombre (opcional)</Label>
-                  <Input id="name" placeholder="Ingresá tu nombre" />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email (opcional)</Label>
-                  <Input id="email" type="email" placeholder="tu@email.com" />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="request">Pedido de oración</Label>
-                  <Textarea id="request" placeholder="¿Cómo podemos orar por vos?" rows={4} />
-                </div>
-                <Button className="w-full bg-primary hover:bg-primary/90">
-                  <Send className="h-4 w-4 mr-2" />
-                  Enviar pedido de oración
-                </Button>
-                <p className="text-sm text-muted-foreground text-center">
-                  Tu pedido será compartido con nuestro equipo de oración. Mantenemos la confidencialidad.
-                </p>
-              </CardContent>
-            </Card>
+        <section className="mx-auto grid max-w-4xl gap-5 px-5 py-10 md:grid-cols-2">
+          <a
+            href={PRAYER_WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-xl2 border border-brand bg-surface-card p-7 text-center shadow-hair transition-colors hover:bg-warm-50"
+          >
+            <MessageCircle className="mx-auto h-8 w-8 text-brand" aria-hidden="true" />
+            <h2 className="mt-4 text-2xl font-semibold text-ink">Enviar pedido de oración</h2>
+            <p className="mt-3 text-muted-foreground">
+              Tocá acá para abrir WhatsApp con un mensaje listo para enviar.
+            </p>
+          </a>
+          <a
+            href={TEAM_WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-xl2 border border-line bg-surface-card p-7 text-center transition-colors hover:border-brand"
+          >
+            <Heart className="mx-auto h-8 w-8 text-brand" aria-hidden="true" />
+            <h2 className="mt-4 text-2xl font-semibold text-ink">Sumate al equipo</h2>
+            <p className="mt-3 text-muted-foreground">
+              Escribinos si querés servir orando por otras personas.
+            </p>
+          </a>
+        </section>
 
-            <Card className="border-warm-200 bg-warm-50/30">
-              <CardHeader className="text-center">
-                <Users className="h-12 w-12 mx-auto text-primary mb-4" />
-                <CardTitle>Equipo de oración</CardTitle>
-                <CardDescription>Sumate a nuestro equipo</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-muted-foreground">
-                  Nuestro equipo se reúne semanalmente para orar por los pedidos y las necesidades de la iglesia. También contamos con una línea de oración para urgencias.
-                </p>
-                <div className="space-y-2">
-                  <h4 className="font-medium">Línea de oración</h4>
-                  <a
-                    href="tel:+542991234567"
-                    className="font-semibold text-primary hover:underline"
-                  >
-                    (299) 123-4567
-                  </a>
-                </div>
-                <div className="space-y-2">
-                  <h4 className="font-medium">Reuniones del equipo</h4>
-                  <p className="text-muted-foreground">Jueves 19:00 hs - Sala de oración</p>
-                </div>
-                <Button variant="outline" className="w-full">Quiero sumarme</Button>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Testimonios */}
-          <Card className="border-green-200 bg-green-50/30">
-            <CardHeader className="text-center">
-              <CardTitle>Testimonios y respuestas</CardTitle>
-              <CardDescription>Celebramos lo que Dios está haciendo</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="text-center space-y-4">
-                <p className="text-muted-foreground">Compartí tu testimonio de respuestas de oración para animar a otros.</p>
-                <Button variant="outline">Compartir testimonio</Button>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
+        <ContactSection />
       </main>
       <Footer />
     </div>

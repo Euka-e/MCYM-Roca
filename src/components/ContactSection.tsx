@@ -45,6 +45,24 @@ const ContactSection = () => {
               (+54) 298 473-1622
             </a>
           </div>
+          <div className="mt-3 grid gap-2 sm:grid-cols-2">
+            <a
+              href="https://wa.me/542984204886?text=Hola%2C%20quisiera%20hacer%20una%20consulta."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex min-h-[48px] items-center justify-center rounded-xl border border-brand px-4 text-center font-semibold text-brand hover:bg-warm-50"
+            >
+              WhatsApp: 420-4886
+            </a>
+            <a
+              href="https://wa.me/542984731622?text=Hola%2C%20quisiera%20hacer%20una%20consulta."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex min-h-[48px] items-center justify-center rounded-xl border border-brand px-4 text-center font-semibold text-brand hover:bg-warm-50"
+            >
+              WhatsApp: 473-1622
+            </a>
+          </div>
         </div>
       </div>
     </section>

@@ -5,7 +5,7 @@ const Navigation = () => {
     <header className="sticky top-0 z-20 flex items-center gap-3 border-b border-line-soft bg-[rgba(255,253,247,.94)] px-5 py-3.5 backdrop-blur-md">
       <Link to="/" className="flex min-h-[48px] min-w-0 items-center gap-3">
         <img
-          src="/logo.png"
+          src="/logo-mark.svg"
           alt="MCYM General Roca"
           className="h-10 w-10 shrink-0"
         />
