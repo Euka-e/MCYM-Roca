@@ -66,7 +66,12 @@ const Prayer = () => {
                 </p>
                 <div className="space-y-2">
                   <h4 className="font-medium">Línea de oración</h4>
-                  <p className="text-primary font-semibold">(299) 123-4567</p>
+                  <a
+                    href="tel:+542991234567"
+                    className="font-semibold text-primary hover:underline"
+                  >
+                    (299) 123-4567
+                  </a>
                 </div>
                 <div className="space-y-2">
                   <h4 className="font-medium">Reuniones del equipo</h4>

@@ -20,8 +20,17 @@ const Footer = () => {
         comprometemos a amar a Dios y servir a nuestro prójimo.
       </p>
       <div className="mt-5 flex flex-col gap-1.5 text-[17px] text-[rgba(255,253,245,.86)]">
-        <span>Cipolletti 860, General Roca, Río Negro</span>
-        <span>(+54) 298 420-4886</span>
+        <a
+          href="https://maps.google.com/?q=Cipolletti+860,+General+Roca,+Rio+Negro"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:underline"
+        >
+          Cipolletti 860, General Roca, Río Negro
+        </a>
+        <a href="tel:+542984204886" className="hover:underline">
+          (+54) 298 420-4886
+        </a>
       </div>
       <h2 className="mb-3 mt-7 font-display text-xl font-semibold">Seguinos</h2>
       <div className="grid grid-cols-[repeat(auto-fit,minmax(96px,1fr))] gap-2.5">

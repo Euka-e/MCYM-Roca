@@ -83,7 +83,9 @@ const Contact = () => {
                   <CardDescription>Para atención pastoral urgente, llamá a nuestra línea directa.</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Button variant="outline">(299) 000-0003</Button>
+                  <Button variant="outline" asChild>
+                    <a href="tel:+542990000003">(299) 000-0003</a>
+                  </Button>
                 </CardContent>
               </Card>
             </div>
@@ -120,14 +122,23 @@ const Contact = () => {
                     <div className="space-y-2">
                       <div className="flex items-center justify-center text-sm text-muted-foreground">
                         <Mail className="h-4 w-4 mr-2" />
-                        {member.email}
+                        <a href={`mailto:${member.email}`} className="hover:underline">
+                          {member.email}
+                        </a>
                       </div>
                       <div className="flex items-center justify-center text-sm text-muted-foreground">
                         <Phone className="h-4 w-4 mr-2" />
-                        {member.phone}
+                        <a
+                          href={`tel:+54${member.phone.replace(/\D/g, "")}`}
+                          className="hover:underline"
+                        >
+                          {member.phone}
+                        </a>
                       </div>
                     </div>
-                    <Button variant="outline" size="sm" className="mt-4">Contactar</Button>
+                    <Button variant="outline" size="sm" className="mt-4" asChild>
+                      <a href={`mailto:${member.email}`}>Contactar</a>
+                    </Button>
                   </CardContent>
                 </Card>
               ))}
@@ -158,7 +169,15 @@ const Contact = () => {
                           <br />
                           General Roca, Río Negro
                         </p>
-                        <Button variant="outline" size="sm" className="mt-3">Cómo llegar</Button>
+                        <Button variant="outline" size="sm" className="mt-3" asChild>
+                          <a
+                            href="https://maps.google.com/?q=Cipolletti+860,+General+Roca,+Rio+Negro"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Cómo llegar
+                          </a>
+                        </Button>
                       </div>
                     </div>
                   </CardContent>
